@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Título de la página web</title>
+        <script>
+            function consultaDOM() {                
+                let a = document.getElementById("cabecera")
+                console.log('texto cabecera' , a.innerHTML)
+                a.text = "Otra Cabecera"
+
+                let b = document.getElementsByClassName("clase1")
+                console.log('texto párrafo' , b[0])
+
+                let c = document.getElementsByTagName("h1")
+                console.log('id cabecera' , c[0].id)
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="cabecera">Mi Cabecera</h1>
+        <p class="clase1">Párrafo</p>
+        <img src="imagen.png" style="width:200px;height:200px;"></img>        
+        <input type="text"></input>
+        <button onclick="consultaDOM()">Acceder</button>        
+    </body>
+</html>

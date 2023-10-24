@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Título de la página web</title>
+    </head>
+    <body>
+        <il id="lista" onclick="click1()">
+            <ol>Opción 1</ol>
+            <ol>Opción 2</ol>
+            <ol>Opción 3</ol>
+            <ol onclick="click2()">Opción 4</ol>
+        </il>        
+        <script>
+            function click1() {
+                alert("Ejecutado click 1")
+            }
+            
+            function click2() {
+                event.stopPropagation(); 
+                alert("Ejecutado click 2")
+            }
+        </script>
+    </body>
+</html>

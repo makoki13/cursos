@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Título de la página web</title>
+    </head>
+    <body>
+        <il id="lista">
+            <ol>Opción 1</ol>
+            <ol>Opción 2</ol>
+            <ol>Opción 3</ol>
+            <ol>Opción 4</ol>
+        </il>
+        <button>BOTON QUE NO HACE NADA</button>
+        <script>
+            function cambiaElemento(elemento) {
+                //console.log(elemento.innerHTML)
+                elemento.innerHTML += " (cambiado)"
+            }
+
+            function cambiaColor() {
+                let lista = document.getElementById("lista")
+                var todasLasOpciones = lista.querySelectorAll("ol");
+                todasLasOpciones.forEach(cambiaElemento)
+            }
+            
+            var boton = document.getElementsByTagName("button")[0];
+            boton.addEventListener("click", cambiaColor);
+        </script>
+    </body>
+</html>

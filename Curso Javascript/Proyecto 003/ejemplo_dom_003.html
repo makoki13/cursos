@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Título de la página web</title>
+        <script>
+            function addDOM() {                
+                let lista = document.getElementById("lista")                
+                let nuevaOpcion = document.createElement("ol");
+                console.log(nuevaOpcion)
+                nuevaOpcion.innerHTML = "Nueva Opción"                
+                lista.appendChild(nuevaOpcion)
+            }
+
+            function delDOM() {                
+                let lista = document.getElementById("lista")
+                respuesta = confirm("Desea eliminar la lista")
+                if (!respuesta) return                
+                console.log("Se borra la lista")
+                lista.parentNode.removeChild(lista);
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="cabecera">Mi Cabecera</h1>
+        <il id="lista">
+            <ol>Elemento 1</ol>
+            <ol>Elemento 2</ol>
+            <ol>Elemento 3</ol>
+            <ol>Elemento 4</ol>
+        </il>
+        <p></p>
+        <img src="imagen.png" style="width:200px;height:200px;"></img>
+        <button onclick="addDOM()">Añadir</button>
+        <button onclick="delDOM()">Quitar</button>
+    </body>
+</html>

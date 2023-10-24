@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Título de la página web</title>
+        <script>
+            function modificaDOM() {                
+                let b = document.getElementsByClassName("clase1")
+                console.log('texto párrafo' , b[0])
+                b[0].innerHTML= "Otro texto de párrafo"
+            }
+
+            function modificaDOM2() {
+                let imagenes = document.getElementsByTagName("img")
+                let imagen = imagenes[0]
+                console.log(imagen)                
+                imagen.src= "llave2.jpg"
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="cabecera">Mi Cabecera</h1>
+        <p class="clase1">Texto Párrafo</p>
+        <img src="imagen.png" style="width:200px;height:200px;"></img>
+        <button onclick="modificaDOM2()">Acceder</button>
+    </body>
+</html>

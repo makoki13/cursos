@@ -1,0 +1,117 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; /* Sin margen exterior alrededor del cuerpo del documento */
+  padding: 0; /* Sin relleno interno dentro del cuerpo del documento */
+  background-color: #f5f5f5; /* Color de fondo */
+  color: #333; /* Color de texto */
+}
+
+/* Encabezado */
+header {
+  background-color: #333; /* Color de fondo del encabezado */
+  color: #fff; /* Color de texto en el encabezado */
+  padding: 20px; /* Espacio interno en el encabezado */
+  text-align: center; /* Texto centrado en el encabezado */
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #333; /* Color de texto para los títulos */
+}
+
+/* Enlaces */
+a {
+  color: #007BFF; /* Color de enlaces */
+  text-decoration: none; /* Sin subrayado en enlaces */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayado en enlaces al pasar el mouse */
+}
+
+/* Secciones */
+section {
+  background-color: #fff; /* Color de fondo de las secciones */
+  padding: 20px; /* Espacio interno en las secciones */
+  margin: 20px 0; /* Margen exterior arriba y abajo en las secciones */
+  border: 1px solid #ddd; /* Borde con color y grosor */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Listas */
+ul {
+  list-style: none; /* Sin viñetas en listas no ordenadas */
+  padding-left: 20px; /* Sangría izquierda en listas no ordenadas */
+}
+
+li {
+  margin: 5px 0; /* Margen exterior arriba y abajo entre elementos de la lista */
+}
+
+/* Tablas */
+table {
+  width: 100%; /* Ancho de tabla al 100% del contenedor */
+  border-collapse: collapse; /* Bordes de celda colapsados */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Borde de celdas con color y grosor */
+  padding: 8px; /* Espacio interno en celdas */
+  text-align: left; /* Alineación de texto a la izquierda */
+}
+
+/* Imágenes */
+img {
+  max-width: 100%; /* Imágenes escaladas al 100% del ancho del contenedor */
+  height: auto; /* Proporciones de altura automáticas */
+}
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilos para la clase 'row' (contenedor de columnas) */
+.row {
+  display: flex; /* Utiliza el modelo de caja flexible */
+  flex-wrap: wrap; /* Envuelve las columnas si no caben en una fila */
+  justify-content: space-between; /* Distribuye el espacio entre las columnas */
+  margin-bottom: 20px; /* Margen inferior entre filas */
+  background-color: yellow; /* Color de fondo amarillo (solo para demostración) */
+}
+
+/* Estilos para la clase 'col' (columna individual) */
+.col {
+  flex: 0 0 calc(50% - 10px); /* Ancho flexible del 50% con márgenes */
+  background-color: grey; /* Color de fondo gris (solo para demostración) */
+  padding: 10px; /* Espacio interno en las columnas */
+  border: 1px solid #ddd; /* Borde con color y grosor */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 5px; /* Margen exterior entre columnas */
+}
+
+/* Estilos para columnas impares */
+.col:nth-child(odd) {
+  flex-basis: calc(66.6667% - 10px); /* Ancho del 66.6667% para columnas impares */
+}
+
+/* Estilos para columnas pares */
+.col:nth-child(even) {
+  flex-basis: calc(33.3333% - 10px); /* Ancho del 33.3333% para columnas pares */
+}
+
+/* Estilos para la clase 'contenedor-flexbox' (contenedor adicional) */
+.contenedor-flexbox {
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos del contenedor */
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+}
+  

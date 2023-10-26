@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .left-column {
+            width: 50%;
+            float: left; /* Hace que la columna flote a la izquierda */
+            background-color: #f0f0f0;
+            padding: 0px;
+        }
+
+        .right-column {
+            width: 50%;
+            float: left; /* Hace que la columna flote a la izquierda */
+            background-color: #ccc;
+            padding: 0px;
+        }
+
+        .clearing-element {
+            clear: both; /* Limpia los flotadores previos (left y right) */
+        }
+
+        .bottom-element {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">Columna Izquierda</div>
+        <div class="right-column">Columna Derecha</div>
+        <div class="clearing-element"></div>
+        <div class="bottom-element">Elemento Inferior</div>
+    </div>
+</body>
+</html>

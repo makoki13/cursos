@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Adivinanza de Número</title>
+</head>
+<body>
+  <h1>Juego de Adivinanza de Número</h1>
+  <p>Estoy pensando en un número entre 1 y 100. ¿Puedes adivinar cuál es?</p>
+  <input type="number" id="guess" placeholder="Tu conjetura" required>
+  <button id="adivinarBtn" type="button">Adivinar</button>
+  <div id="resultado"></div>
+  <script>
+    // Generar un número aleatorio entre 1 y 100
+    const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    
+    // Obtener elementos HTML relevantes
+    const guessInput = document.getElementById("guess");
+    const adivinarBtn = document.getElementById("adivinarBtn");
+    const resultado = document.getElementById("resultado");
+
+    // Contador de intentos
+    let intentos = 0;
+
+    // Función para adivinar el número
+    function adivinarNumero() {
+      const conjetura = parseInt(guessInput.value);
+      intentos++;
+
+      if (conjetura < numeroAleatorio) {
+        resultado.textContent = "Demasiado bajo. Intenta de nuevo.";
+      } else if (conjetura > numeroAleatorio) {
+        resultado.textContent = "Demasiado alto. Intenta de nuevo.";
+      } else {
+        resultado.textContent = `¡Felicidades! Adivinaste el número en ${intentos} intentos.`;
+        adivinarBtn.disabled = true;
+      }
+
+      guessInput.value = ""; // Borrar la conjetura anterior
+    }
+
+    // Asignar la función "adivinarNumero" al evento click del botón "Adivinar"
+    adivinarBtn.addEventListener("click", adivinarNumero);
+  </script>
+</body>
+</html>

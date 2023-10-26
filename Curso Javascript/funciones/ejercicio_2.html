@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación de Contraseña</title>
+</head>
+<body>
+  <h1>Validación de Contraseña</h1>
+  <form>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" required>
+    <br>
+    <button id="validarBtn" type="button">Validar Contraseña</button>
+  </form>
+  <div id="resultado"></div>
+  <script>
+    // Función para validar la contraseña
+    function validarContrasena() {
+      const contrasena = document.getElementById("password").value;
+      const resultado = document.getElementById("resultado");
+
+      // Realizar validaciones personalizadas aquí
+      if (contrasena.length < 8) {
+        resultado.textContent = "La contraseña debe tener al menos 8 caracteres.";
+      } else if (!/[A-Z]/.test(contrasena)) {
+        resultado.textContent = "La contraseña debe contener al menos una letra mayúscula.";
+      } else if (!/[a-z]/.test(contrasena)) {
+        resultado.textContent = "La contraseña debe contener al menos una letra minúscula.";
+      } else if (!/\d/.test(contrasena)) {
+        resultado.textContent = "La contraseña debe contener al menos un número.";
+      } else {
+        resultado.textContent = "La contraseña es válida.";
+      }
+    }
+
+    // Asignar la función "validarContrasena" al evento click del botón "Validar Contraseña"
+    document.getElementById("validarBtn").addEventListener("click", validarContrasena);
+  </script>
+</body>
+</html>

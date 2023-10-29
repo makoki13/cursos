@@ -7,9 +7,13 @@
         button {width: 200px; color: white; background-color: green; font-size: 18px; text-align: center; height: 100px;}
         #btnLimpiar {width: 200px; color: white; background-color: blue; font-size: 18px; text-align: center; height: 30px;}
         label {font-size: 24px; text-align: left; font-weight: bolder;}
+        input [type="text"] {border:2px solid green; text-align:center}
+        .label_entrada {font-size: 18px; text-align: right; font-weight: bolder;padding-right: 10px;}
     </style>
 </head>
-<body>        
+<body>      
+    <label for="entrada" class="label_entrada">DATOS:</label><input type="text" id="entrada" placeholder="Escriba un dato"></input>  
+    <p></p>
     <button id="btnEjecutar" onclick="ejecutar()">EJECUTAR</button>
     <label id="salida"></label>
     <script src="curso_javascript.js"></script>

@@ -5,6 +5,7 @@ body {
   padding: 0; /* Sin relleno interno dentro del cuerpo del documento */
   background-color: #f5f5f5; /* Color de fondo */
   color: #333; /* Color de texto */
+  width:90%;
 }
 
 /* Encabezado */
@@ -63,7 +64,7 @@ th, td {
 
 /* Imágenes */
 img {
-  max-width: 100%; /* Imágenes escaladas al 100% del ancho del contenedor */
+  max-width: 10%; /* Imágenes escaladas al 100% del ancho del contenedor */
   height: auto; /* Proporciones de altura automáticas */
 }
 

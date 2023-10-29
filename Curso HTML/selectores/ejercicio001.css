@@ -1,0 +1,39 @@
+/* Estilos para selección de elementos */
+p {
+    color: blue;
+}
+
+a {
+    color: green;
+}
+
+/* Estilos para selección de clases */
+.parrafo {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para selección de IDs */
+#parrafo1 {
+    font-weight: bold;
+}
+
+/* Estilos para selección de atributos */
+a[class="enlace"] {
+    text-decoration: none;
+    color: red;
+}
+
+/* Estilos para selección universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:hover {
+    color: brown;
+    /*cursor: pointer;*/
+  }
+
+  h1 {
+    /*color:black;*/
+  }

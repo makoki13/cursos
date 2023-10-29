@@ -1,10 +1,23 @@
 function ejecutar() {
-    var numeros = [1, 2, 3, 4, 5];
-    mostrar(numeros) // [1,2,3,4,5]
-    var doble = numeros.map(function(numero) {
-      return numero * 2;
-    });
-    mostrar(doble) // [2,4,6,8,10]
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Solicitud fallida');
+            }
+            return response.json(); // Analiza la respuesta como JSON
+        })
+        .then(users => {
+            const ul = document.createElement('ul');
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = user.name;
+                ul.appendChild(li);
+            });
+            document.body.appendChild(ul);
+        })
+        .catch(error => {
+            console.error(error);
+        });
 }
 
 function mostrar(texto) {
@@ -12,5 +25,5 @@ function mostrar(texto) {
 }
 
 function limpiar() {
-    document.getElementById("salida").innerHTML = ""
+    mostrar("")
 }

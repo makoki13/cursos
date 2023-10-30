@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Definir una animación llamada "desplazar" */
+        @keyframes desplazar {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(100px);
+            }
+        }
+
+        @keyframes apagarse {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 100;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes cambio-de-color {
+            0% {
+                background-color: black;
+            }
+            100% {
+                background-color: white;
+            }
+        }
+        
+        /* Aplicar la animación al cuadrado */
+        div {
+            width: 280px;
+            height: 20px;
+            background-color: #3498db;
+            border:1px solid black;
+            animation: desplazar 5s ease infinite 0s;
+            /*animation: apagarse 0.2s ease infinite 0s;*/
+            /*animation: rotate 1s ease infinite 0s; */
+            
+            vertical-align: center;
+            padding: 20px;
+        }
+
+        div:hover {
+            animation: cambio-de-color 2s ease-in-out;
+            /*background-color: white;*/
+        }
+        </style>
+</head>
+<body>
+    <div>ESTE ES UN TEXTO DENTRO DEL DIV</div>
+</body>
+</html>

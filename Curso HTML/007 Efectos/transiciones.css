@@ -1,0 +1,13 @@
+/* Definir una transición en un botón */
+button {
+    height: 100px; 
+    width:100px;
+    background-color: white;
+
+    transition: background-color 1s ease;
+}
+
+/* Cambiar el color de fondo al pasar el mouse por encima */
+button:hover {
+    background-color: #3498db;
+}

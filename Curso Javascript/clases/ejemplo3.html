@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Definición de la clase Animal (clase base)
+        class Animal {
+            constructor(especie) {
+                this.especie = especie;
+            }
+        }
+
+        // Definición de la clase Salvaje (hereda de Animal)
+        class Salvaje extends Animal {
+            constructor(especie, id) {
+                super(especie);
+                this.id = id;
+            }
+        }
+
+        // Definición de la clase Mascota (hereda de Animal)
+        class Mascota extends Animal {
+            constructor(nombre, especie, edad) {
+                super(especie);
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+        }
+
+        // Definición de la clase Perro (hereda de Mascota)
+        class Perro extends Mascota {
+            constructor(nombre, edad, numero) {
+                super(nombre, "Perro", edad);
+                this.numero = numero;
+            }
+        }
+
+        // Definición de la clase Gato (hereda de Mascota)
+        class Gato extends Mascota {
+            constructor(nombre, edad, raza) {
+                super(nombre, "Gato", edad);
+                this.raza = raza;
+            }
+        }
+
+        // Definición de la clase Propietario
+        class Propietario {
+            constructor(nombre, telefono) {
+                this.nombre = nombre;
+                this.telefono = telefono;        
+            }
+        }
+
+        // Definición de la clase ClinicaVeterinaria
+        class ClinicaVeterinaria {
+            constructor(nombre) {
+                this.nombre = nombre;
+                this.registroMascotas = [];
+            }
+
+            registrarMascota(mascota, propietario) {
+                this.registroMascotas.push({ mascota, propietario });
+            }
+
+            mostrarRegistro() {
+                console.log(`---- Registro de Mascotas en ${this.nombre} ----`);
+                for (const registro of this.registroMascotas) {
+                const { mascota, propietario } = registro;
+                console.log(`Mascota: ${mascota.nombre}, Especie: ${mascota.especie}, Edad: ${mascota.edad}`);
+                if (mascota instanceof Perro) {
+                    console.log(`Número: ${mascota.numero}`);
+                } else if (mascota instanceof Gato) {
+                    console.log(`Raza: ${mascota.raza}`);
+                }
+                console.log(`Propietario: ${propietario.nombre}, Teléfono: ${propietario.telefono}`);
+                console.log("------------------------------");
+                }
+            }
+        }
+
+        // Creación de instancias
+        const perro1 = new Perro("Buddy", 4, "P123");
+        const perro2 = new Perro("Max", 2, "P456");
+
+        const gato1 = new Gato("Whiskers", 3, "Siames");
+        const gato2 = new Gato("Luna", 1, "Persa");
+
+        const propietario1 = new Propietario("Juan Pérez", "123-456-7890");
+        const propietario2 = new Propietario("María López", "987-654-3210");
+
+        const clinicaVeterinaria = new ClinicaVeterinaria("Mi Clínica Vet");
+
+        clinicaVeterinaria.registrarMascota(perro1, propietario1);
+        clinicaVeterinaria.registrarMascota(perro2, propietario2);
+        clinicaVeterinaria.registrarMascota(gato1, propietario1);
+        clinicaVeterinaria.registrarMascota(gato2, propietario2);
+
+        clinicaVeterinaria.mostrarRegistro();
+        </script>
+    </head>
+    <body>
+        <h3>Presiona F12 para ver la salida en la consola del navegador</h3>
+    </body>
+</html>
+        

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      // Definición de la clase Cliente
+      class Cliente {
+        constructor(nombre, direccion) {
+          this.nombre = nombre;
+          this.direccion = direccion;
+        }
+      }
+
+      // Definición de la clase Producto
+      class Producto {
+        constructor(nombre, precio) {
+          this.nombre = nombre;
+          this.precio = precio;
+        }
+      }
+
+      // Definición de la clase Factura
+      class Factura {
+        constructor(cliente) {
+          this.cliente = cliente;
+          this.productos = [];
+        }
+
+        agregarProducto(producto) {
+          this.productos.push(producto);
+        }
+
+        calcularTotal() {
+          let total = 0;
+          for (const producto of this.productos) {
+            total += producto.precio;
+          }
+          return total;
+        }
+
+        generarFactura() {
+          console.log("---- Factura ----");
+          console.log(`Cliente: ${this.cliente.nombre}`);
+          console.log("Productos:");
+          for (const producto of this.productos) {
+            console.log(`A: ${producto.nombre}: ${producto.precio} euros`);
+          }
+
+          /* this.productos.forEach((producto) => {
+            console.log(`B: ${producto.nombre}: ${producto.precio} euros`);
+          }) */
+
+          console.log(`Total: ${this.calcularTotal()} euros`);
+        }
+      }
+
+      // Creación de instancias
+      const cliente1 = new Cliente("Juan Pérez", "123 Calle Principal");
+      const producto1 = new Producto("Producto A", 50);
+      const producto2 = new Producto("Producto B", 30);
+
+      const factura1 = new Factura(cliente1);
+      factura1.agregarProducto(producto1);
+      factura1.agregarProducto(producto2);
+
+      factura1.generarFactura();
+
+    </script>
+</head>
+<body>
+    <h3>Presiona F12 para ver la salida en la consola del navegador</h3>
+</body>
+</html>

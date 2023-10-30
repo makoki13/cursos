@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Definición de la clase Persona
+        class Persona {
+          // Constructor de la clase
+          constructor(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+          }
+        
+          // Método para mostrar información de la persona
+          mostrarInformacion() {
+            console.log(`Nombre: ${this.nombre}, Edad: ${this.edad}`);
+          }
+        }
+        
+        // Creación de instancias de la clase Persona
+        const persona1 = new Persona("Juan", 30);
+        const persona2 = new Persona("María", 25);
+        
+        // Llamada a métodos de las instancias
+        persona1.mostrarInformacion();
+        persona2.mostrarInformacion();
+    </script>
+</head>
+<body>
+    <h3>Presiona F12 para ver la salida en la consola del navegador</h3>
+</body>
+</html>

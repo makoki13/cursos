@@ -1,0 +1,105 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 20px;
+}
+
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+} */
+
+/* Estilos para la cabecera */
+#cabecera {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#cabecera h2 {
+    color: #007BFF;
+    font-size: 24px;
+}
+
+/* Estilos para el cuerpo */
+#cuerpo {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+#cuerpo h2 {
+    color: #007BFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#cuerpo label {
+    font-weight: bold;
+}
+
+#cuerpo select,
+#cuerpo input[type="text"],
+#cuerpo input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#cuerpo button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para la factura */
+#factura {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+#factura h2 {
+    color: #007BFF;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#factura table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+#factura th,
+#factura td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#factura th {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+#factura p {
+    text-align: right;
+    font-weight: bold;
+}

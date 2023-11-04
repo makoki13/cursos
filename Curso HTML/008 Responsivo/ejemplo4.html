@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {            
+            margin: 0px auto;
+            padding: 0;
+            background-color: cyan;
+        }
+        
+        .container {
+            display: inline-flex;
+            /*flex-wrap: wrap;*/
+            margin: 10px auto;
+            justify-content: space-between;
+            border: 1px solid black; 
+            background-color: cyan;
+        }
+
+        .row {            
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .celda {            
+            margin: 20px; /* Espacio entre las columnas */
+            padding: 10px; /* Espacio de relleno interno */
+            background-color: #f2f2f2; /* Color de fondo */
+            border: 1px solid blue; /* Borde */
+            text-align: center; /* Alineación del contenido al centro */
+            box-sizing: border-box; /* Incluye el espacio de relleno y el borde en el ancho total */
+        }
+
+        /* Estilos adicionales para texto dentro de la columna */
+        .celda p {
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="celda"><p>F1 C1</p></div>
+            <div class="celda"><p>F1 C2</p></div>
+            <div class="celda"><p>F1 C3</p></div>
+        </div>
+        <div class="row">
+            <div class="celda"><p>F2 C1</p></div>
+            <div class="celda"><p>F2 C2</p></div>
+            <div class="celda"><p>F2 C3</p></div>
+        </div>
+        <div class="row">
+            <div class="celda"><p>F3 C1</p></div>
+            <div class="celda"><p>F3 C2</p></div>
+            <div class="celda"><p>F3 C3</p></div>
+        </div>
+    </div>        
+</body>
+</html>

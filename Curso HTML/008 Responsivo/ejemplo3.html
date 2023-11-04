@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header, main {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gainsboro;
+        }
+
+        main {
+            background-color: pink;
+        }
+
+
+        
+        .video-container {            
+            border: 1px solid red;
+            background-color: blue;
+        }
+
+        .video-container iframe {            
+            top: 0;
+            left: 0;
+            width: 500px;
+            height: 300px;
+            padding: 10px;
+        }
+
+        iframe {
+            padding: 10px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VIDEOS DE YOUTUBE</h1>
+    </header>
+    <main>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/nM8swCvLu78" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>    
+</body>
+</html>

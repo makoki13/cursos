@@ -64,7 +64,7 @@ th, td {
 
 /* Imágenes */
 img {
-  max-width: 10%; /* Imágenes escaladas al 100% del ancho del contenedor */
+  max-width: 10%; /* Imágenes escaladas al 10% del ancho del contenedor */
   height: auto; /* Proporciones de altura automáticas */
 }
 

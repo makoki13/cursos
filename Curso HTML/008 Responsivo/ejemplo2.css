@@ -1,0 +1,33 @@
+header,
+footer {
+  min-height: 200px;
+  background: grey;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu, .content {        
+    min-height: 200px;    /* Por defecto, height es 0 */      
+    min-width: 200px;
+    width: 50%;
+    height: auto;
+    max-height: 200px;
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    /* height: auto */  /* se mantiene la proporción, luego desborda */
+  }
+
+.menu {
+  background: blue;
+  
+} 
+
+.content {  
+  background: green;
+}

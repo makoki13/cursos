@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+
+        .list {
+            background-color: #f2f2f2;
+        }
+
+        .table {
+            background-color: #e6e6e6;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column list">
+            <h2>Lista de Elementos</h2>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <li>Elemento 4</li>
+                <li>Elemento 5</li>
+            </ul>
+        </div>
+        <div class="column table">
+            <h2>Tabla de Datos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Elemento A</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Elemento B</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Elemento C</td>
+                        <td>300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

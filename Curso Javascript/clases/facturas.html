@@ -22,18 +22,21 @@
         <input type="date" id="fechaFactura">
     </div>
     <div id="cuerpo">
-        <h2>Detalle de la Factura</h2>
-        <label for="articulo">Artículo:</label>
-        <select id="articulo">
-            <option value="articulo1">Artículo 1</option>
-            <option value="articulo2">Artículo 2</option>
-            <option value="articulo3">Artículo 3</option>
-        </select>
-        <label for="precio">Precio Unitario:</label>
-        <input type="number" id="precio" step="0.01">
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad">
-        <button id="agregarArticulo">Agregar Artículo</button>
+        <h2>Detalle de la Factura</h2>        
+        <div class="campos">
+            <label for="articulo">Artículo:</label>
+            <select id="articulo">
+                <option value="articulo1">Artículo 1</option>
+                <option value="articulo2">Artículo 2</option>
+                <option value="articulo3">Artículo 3</option>
+            </select>
+            <label for="precio">Precio Unitario:</label>
+            <input type="number" id="precio" step="0.01">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad">
+            <button id="agregarArticulo">Agregar Artículo</button>
+        </div>
+        
     </div>
     <div id="factura">
         <h2>Factura</h2>

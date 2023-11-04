@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: gainsboro;
 }
 
 h1 {
@@ -22,7 +23,7 @@ h1 {
 #cabecera {
     background-color: #f4f4f4;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid blue;
     margin-bottom: 20px;
 }
 
@@ -35,7 +36,7 @@ h1 {
 #cuerpo {
     background-color: #fff;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid blue;
     margin-bottom: 20px;
 }
 
@@ -47,6 +48,9 @@ h1 {
 
 #cuerpo label {
     font-weight: bold;
+    min-width: 150px;
+    text-align: right;
+    padding-right: 3px;
 }
 
 #cuerpo select,
@@ -66,12 +70,25 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 200px;
+}
+
+#cuerpo .campos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#cuerpo .campos label,
+#cuerpo .campos select,
+#cuerpo .campos input[type="number"] {
+    margin-right: 10px;
 }
 
 /* Estilos para la factura */
 #factura {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid blue;
     padding: 20px;
 }
 
@@ -89,7 +106,7 @@ h1 {
 
 #factura th,
 #factura td {
-    border: 1px solid #ddd;
+    border: 1px solid gray;
     padding: 10px;
     text-align: center;
 }

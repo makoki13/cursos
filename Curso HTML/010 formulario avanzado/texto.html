@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Texto</title>
+    <link rel="stylesheet" href="texto.css">
+</head>
+<body>
+    <header>
+        <h1>Editor de Texto</h1>
+    </header>
+    <div class="container">
+        <form id="text-form" onsubmit="">
+            <div class="form-group">
+                <label for="text-color">Color de Texto:</label>
+                <input type="color" id="text-color" name="text-color">
+            </div>
+            <div class="form-group">
+                <label for="font-family">Fuente:</label>
+                <select id="font-family" name="font-family">
+                    <option value="Arial, sans-serif">Arial</option>
+                    <option value="Times New Roman, serif">Times New Roman</option>
+                    <option value="Courier New, monospace">Courier New</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="font-size">Tamaño de Letra:</label>
+                <input type="number" id="font-size" name="font-size" min="8" max="72">
+            </div>
+            <div class="form-group">
+                <label>Estilo:</label>
+                <input type="checkbox" id="bold" name="style" value="bold">
+                <label for="bold">Negrita</label>
+                <input type="checkbox" id="underline" name="style" value="underline">
+                <label for="underline">Subrayado</label>
+                <input type="checkbox" id="italic" name="style" value="italic">
+                <label for="italic">Cursiva</label>
+            </div>
+            <div class="form-group">
+                <label>Capitalización:</label>
+                <input type="radio" id="uppercase" name="text-transform" value="uppercase" checked>
+                <label for="uppercase">Mayúsculas</label>
+                <input type="radio" id="lowercase" name="text-transform" value="lowercase">
+                <label for="lowercase">Minúsculas</label>
+                <input type="radio" id="capitalize" name="text-transform" value="capitalize">
+                <label for="capitalize">Versalitas</label>
+            </div>
+            <button type="submit">Aplicar Estilos</button>
+        </form>
+        <div class="text-area">
+            <textarea id="output">Este es un texto del ejemplo</textarea>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Tu Nombre</p>
+    </footer>
+    <script src="texto.js"></script>
+</body>
+</html>

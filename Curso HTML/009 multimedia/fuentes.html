@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Fuentes Externas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            font-size: 24px;
+        }
+
+        #btn2 {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #btn3 {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #btn4 {
+            font-family: 'Lobster', cursive;
+        }
+
+        
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+</head>
+<body>
+    <button id="btn1" onclick="boton1()">BOTÓN NÚMERO 1</button>
+    <button id="btn2" onclick="boton2()">BOTÓN NÚMERO 2</button>
+    <button id="btn3" onclick="boton3()">BOTÓN NÚMERO 3</button>
+    <button id="btn4" onclick="boton4()">BOTÓN NÚMERO 4</button>
+
+    <script>
+        function boton1() {
+            alert("Este es un párrafo con la fuente predeterminada.");
+        }
+
+        function boton2() {
+            alert("Este párrafo utiliza la fuente 'Roboto'.");
+        }
+
+        function boton3() {
+            alert("Este párrafo utiliza la fuente 'Open Sans'.");
+        }
+
+        function boton4() {
+            alert("Este párrafo utiliza la fuente 'Lobster'.");
+        }
+    </script>
+</body>
+</html>

@@ -7,41 +7,47 @@ body {
     color: #333; /* Color de texto predeterminado */
   }
   
-  /* Estilos para el encabezado del formulario */
-  h1 {
+/* Estilos para el encabezado del formulario */
+h1 {
     text-align: center; /* Texto centrado en el encabezado */
   }
   
-  /* Estilos para etiquetas de campos de entrada y elementos de formulario */
-  label {
+/* Estilos para etiquetas de campos de entrada y elementos de formulario */
+label {
     display: block; /* Cada etiqueta en una línea nueva */
     margin-bottom: 5px; /* Margen inferior entre etiquetas */
   }
   
-  /* Estilos para campos de entrada de texto y número */
-  input[type="text"],
+/* Estilos para campos de entrada de texto y número */
+input[type="text"],
   input[type="number"],
   input[type="email"] {
     width: 100%; /* Ancho completo del contenedor */
     padding: 10px; /* Espacio interno en campos de entrada */
     margin-bottom: 10px; /* Margen inferior entre campos de entrada */
-    border: 1px solid #ddd; /* Borde con color y grosor */
+    border: 2px solid #ddd; /* Borde con color y grosor */
     border-radius: 5px; /* Bordes redondeados */
   }
   
-  /* Estilos para campos de entrada de tipo radio */
-  input[type="radio"] {
+/* Estilos para campos de entrada de tipo radio */
+input[type="radio"] {
     margin-right: 5px; /* Margen derecho entre opciones de radio */
     display: inline; /* Hace que los radio buttons se muestren en línea */
+    vertical-align: top;
+  }
+
+.radio-label {
+    display: inline; /* Hace que los labels se muestren en línea con los radio buttons */
+    vertical-align: bottom; /* Alinea verticalmente los labels con respecto a los radio buttons */
   }
   
-  /* Estilos para el campo de carga de archivos */
-  input[type="file"] {
+/* Estilos para el campo de carga de archivos */
+input[type="file"] {
     margin-bottom: 10px; /* Margen inferior entre campo de carga de archivos */
   }
   
-  /* Estilos para el botón de envío */
-  input[type="submit"] {
+/* Estilos para el botón de envío */
+input[type="submit"] {
     background-color: #007BFF; /* Color de fondo del botón de envío */
     color: #fff; /* Color de texto en el botón de envío */
     padding: 10px 20px; /* Espacio interno en el botón de envío */
@@ -50,11 +56,13 @@ body {
     cursor: pointer; /* Cambio de cursor al pasar el ratón */
   }
   
-  /* Estilos para el pie de página */
-  footer {
+/* Estilos para el pie de página */
+footer {
     text-align: center; /* Texto centrado en el pie de página */
     padding: 10px; /* Espacio interno en el pie de página */
   }
+
+
 
   
   

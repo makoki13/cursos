@@ -22,11 +22,12 @@
         <input type="number" id="edad" name="edad" required>
         <br>
         
-        <label>Género:</label>
-        <input type="radio" id="genero-masculino" name="genero" value="Masculino" required>
-        <label for="genero-masculino">Masculino</label>
-        <input type="radio" id="genero-femenino" name="genero" value="Femenino" required>
-        <label for="genero-femenino">Femenino</label>        
+        <label class="radio-label">
+            <input type="radio" name="genero" value="Masculino"> Masculino
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="genero" value="Femenino"> Femenino
+        </label>
         <br>
         
         <label for="email">Correo Electrónico:</label>
@@ -41,22 +42,3 @@
     </form>
 </body>
 </html>
-
-<!--
-    <label class="radio-label">
-        <input type="radio" name="genero" value="Masculino"> Masculino
-    </label>
-    <label class="radio-label">
-        <input type="radio" name="genero" value="Femenino"> Femenino
-    </label>
-
-    .radio-label {
-    display: inline-block; /* Hace que los labels se muestren en línea con los radio buttons */
-    vertical-align: middle; /* Alinea verticalmente los labels con respecto a los radio buttons */
-}
-
-    input[type="radio"] {
-    display: inline-block; /* Hace que los radio buttons se muestren en línea */
-    vertical-align: middle; /* Alinea verticalmente los radio buttons con respecto a los labels */
-}
--->

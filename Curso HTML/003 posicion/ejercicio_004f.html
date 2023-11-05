@@ -9,20 +9,24 @@
             padding: 0;
         }
 
+        div {
+            border:1px solid green;
+        }
+
         .container {
-            width: 600px;
+            width: 1000px;
             margin: 0 auto;
         }
 
         .left-column {
-            width: 50%;
+            width: 200px;
             float: left; /* Hace que la columna flote a la izquierda */
             background-color: #f0f0f0;
             padding: 0px;
         }
 
         .right-column {
-            width: 50%;
+            width: 200px;
             float: left; /* Hace que la columna flote a la izquierda */
             background-color: #ccc;
             padding: 0px;
@@ -32,19 +36,15 @@
             clear: both; /* Limpia los flotadores previos (left y right) */
         }
 
-        .bottom-element {
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-column">Columna Izquierda</div>
-        <div class="right-column">Columna Derecha</div>
+        <div class="left-column">Columna </div>
+        <div class="right-column">Columna 2</div>        
+        <div class="right-column">Otra 2</div>        
         <div class="clearing-element"></div>
-        <div class="bottom-element">Elemento Inferior</div>
+        <div class="right-column">Columna 2 separada</div>
     </div>
 </body>
 </html>

@@ -20,8 +20,8 @@ label {
   
 /* Estilos para campos de entrada de texto y número */
 input[type="text"],
-  input[type="number"],
-  input[type="email"] {
+input[type="number"],
+input[type="email"] {
     width: 100%; /* Ancho completo del contenedor */
     padding: 10px; /* Espacio interno en campos de entrada */
     margin-bottom: 10px; /* Margen inferior entre campos de entrada */

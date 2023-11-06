@@ -14,8 +14,7 @@
     font-weight: bold;    
     display: inline-block;
     border-radius: 5px;
-
-    /* Multiplicar por 10 para ver el efecto */
+    
     margin: 20px; /* Margen exterior */
     border: 5px solid #2980b9; /* Borde */
     padding: 15px; /* Relleno interior */

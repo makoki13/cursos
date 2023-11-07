@@ -1,0 +1,76 @@
+<!--
+Crea una página que contenga una tabla HTML con al menos 5 filas y 3 columnas. Utiliza CSS para ajustar el espaciado y el estilo de la tabla.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Tabla con Estilos CSS</title>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Estilos para la tabla */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Estilos adicionales para las filas impares */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+            <th>Columna 3</th>
+        </tr>
+        <tr>
+            <td>Fila 1, C1</td>
+            <td>Fila 1, C2</td>
+            <td>Fila 1, C3</td>
+        </tr>
+        <tr>
+            <td>Fila 2, C1</td>
+            <td>Fila 2, C2</td>
+            <td>Fila 2, C3</td>
+        </tr>
+        <tr>
+            <td>Fila 3, C1</td>
+            <td>Fila 3, C2</td>
+            <td>Fila 3, C3</td>
+        </tr>
+        <tr>
+            <td>Fila 4, C1</td>
+            <td>Fila 4, C2</td>
+            <td>Fila 4, C3</td>
+        </tr>
+        <tr>
+            <td>Fila 5, C1</td>
+            <td>Fila 5, C2</td>
+            <td>Fila 5, C3</td>
+        </tr>
+    </table>
+</body>
+</html>

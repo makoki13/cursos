@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Definir una animación llamada "desplazar" */
+        /* Definir una animación llamada "desplazar" mediante reglas */
         @keyframes desplazar {
             from {
                 transform: translateX(0);
@@ -37,6 +37,9 @@
             0% {
                 background-color: black;
             }
+            50% {
+                background-color: yellow;
+            }
             100% {
                 background-color: white;
             }
@@ -48,16 +51,16 @@
             height: 20px;
             background-color: #3498db;
             border:1px solid black;
-            /*animation: desplazar 5s ease infinite 0s;*/
+            animation: desplazar 5s ease infinite 0s; /* ease: la animación comience lentamente, se acelere en el medio y termine lentamente */
             /*animation: apagarse 0.2s ease infinite 0s;*/
-            animation: rotar 1s ease infinite 0s; 
+            /*animation: rotar 1s ease infinite 0s; */
             
             vertical-align: center;
             padding: 20px;
         }
 
         div:hover {
-            animation: cambio-de-color 2s ease-in-out;
+            animation: cambio-de-color 2s ease-in-out infinite; /*ease-in-out: La animación comienza lentamente, acelera en el medio y luego desacelera al final.*/
         }
         </style>
 </head>

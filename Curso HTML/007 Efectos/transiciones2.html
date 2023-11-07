@@ -12,7 +12,7 @@
     el fondo se vuelve negro, el texto se vuelve blanco y el elemento se escala un 10%. 
     La transición dura 2 segundos y comienza 1 segundo después de que el usuario 
     pasa el ratón por encima del elemento. */
-    .element {
+    * {
 
       transition: all 2s ease-in-out 1s;
     }
@@ -20,7 +20,12 @@
     .element:hover {
       background-color: #000;
       color: #fff;
-      transform: scale(1.1);
+    }
+
+    button:hover {
+      background-color: pink;
+      color: #fff;
+      transform: scale(2);
     }
 </style>
 </head>
@@ -28,7 +33,8 @@
 
 <div class="element">
   <h1>Título</h1>
-  <p>Este es un ejemplo de transición CSS3</p>
+  <p>Este es un ejemplo de transición CSS3</p>  
 </div>
+<button>MI BOTÓN</button>
 </body>
 </html>

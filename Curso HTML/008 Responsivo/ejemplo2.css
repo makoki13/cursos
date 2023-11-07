@@ -20,7 +20,7 @@ footer {
   img {
     max-width: 100%;
     height: 100%;
-    /* height: auto */  /* se mantiene la proporción, luego desborda */
+    /*height: auto;*/  /* se mantiene la proporción, luego desborda */
   }
 
 .menu {

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparación Numérica con Switch en JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Comparación Numérica con Switch</h1>
+
+  <script>
+    // Pedir al usuario que ingrese un número
+    var numero = prompt('Por favor, ingresa un número:');
+
+    // Convertir la entrada a un número
+    numero = parseFloat(numero);
+
+    // Iniciar el switch para comparar el número
+    switch (true) {
+      case (numero > 0):
+        alert('El número ingresado es positivo.');
+        break;
+      case (numero < 0):
+        alert('El número ingresado es negativo.');
+        break;
+      default:
+        alert('El número ingresado es igual a cero.');
+    }
+  </script>
+
+</body>
+</html>

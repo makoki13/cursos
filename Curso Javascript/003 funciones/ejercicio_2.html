@@ -17,17 +17,17 @@
   <script>
     // Función para validar la contraseña
     function validarContrasena() {
-      const contrasena = document.getElementById("password").value;
+      const contrasenya = document.getElementById("password").value;
       const resultado = document.getElementById("resultado");
 
       // Realizar validaciones personalizadas aquí
-      if (contrasena.length < 8) {
+      if (contrasenya.length < 8) {
         resultado.textContent = "La contraseña debe tener al menos 8 caracteres.";
-      } else if (!/[A-Z]/.test(contrasena)) {
+      } else if (!/[A-Z]/.test(contrasenya)) {
         resultado.textContent = "La contraseña debe contener al menos una letra mayúscula.";
-      } else if (!/[a-z]/.test(contrasena)) {
+      } else if (!/[a-z]/.test(contrasenya)) {
         resultado.textContent = "La contraseña debe contener al menos una letra minúscula.";
-      } else if (!/\d/.test(contrasena)) {
+      } else if (!/\d/.test(contrasenya)) {
         resultado.textContent = "La contraseña debe contener al menos un número.";
       } else {
         resultado.textContent = "La contraseña es válida.";

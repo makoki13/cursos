@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenida en JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenido al Curso de JavaScript</h1>
+
+  <script>
+    // Función para obtener el nombre del usuario y mostrar un saludo
+    function saludarUsuario() {
+      // Pedir al usuario su nombre
+      var nombre = prompt('Por favor, ingresa tu nombre:');
+
+      // Verificar si el usuario ingresó un nombre
+      if (nombre) {
+        // Construir el mensaje de bienvenida
+        var mensaje = '¡Hola, ' + nombre + '! Bienvenido al Curso de JavaScript.';
+
+        // Mostrar el mensaje en una ventana emergente
+        alert(mensaje);
+      } else {
+        // Mostrar un mensaje de error si el usuario no ingresó un nombre
+        alert('Por favor, ingresa un nombre válido.');
+      }
+    }
+
+    // Llamar a la función al cargar la página
+    saludarUsuario();
+  </script>
+
+</body>
+</html>

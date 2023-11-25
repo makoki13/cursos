@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <!-- Estilos CSS3 -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        div {
+            margin: 10px 0;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #555;
+        }
+
+        input, button {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        li:hover {
+            background-color: pink;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <h1>Gestión de Tareas</h1>
+
+    <!-- Sección para agregar nuevas tareas -->
+    <div>
+        <label for="taskInput">Nueva Tarea:</label>
+        <input type="text" id="taskInput">
+        <button onclick="addTask()">Agregar Tarea</button>
+    </div>
+
+    <!-- Sección para mostrar la lista de tareas -->
+    <div>
+        <h2>Tareas</h2>
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- Script de JavaScript -->
+    <script>
+        // Array para almacenar las tareas
+        let tasks = [];
+
+        // Función para agregar una nueva tarea
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskName = taskInput.value.trim();
+
+            // Verificar si el nombre de la tarea no está vacío
+            if (taskName !== '') {
+                // Agregar la tarea al array
+                tasks.push({ name: taskName, completed: false });
+                taskInput.value = '';
+                // Actualizar la visualización de las tareas
+                displayTasks();
+            }
+        }
+
+        // Función para cambiar el estado de una tarea (completada/no completada)
+        function toggleTask(index) {
+            tasks[index].completed = !tasks[index].completed;
+            // Actualizar la visualización de las tareas
+            displayTasks();
+        }
+
+        // Función para mostrar las tareas en la interfaz de usuario
+        function displayTasks() {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+
+            // Iterar sobre las tareas y crear elementos de lista
+            for (let i = 0; i < tasks.length; i++) {
+                const task = tasks[i];
+                const listItem = document.createElement('li');
+                listItem.textContent = task.name;
+
+                // Agregar clase 'completed' si la tarea está completada
+                if (task.completed) {
+                    listItem.classList.add('completed');
+                }
+
+                // Manejar clic en una tarea para cambiar su estado
+                listItem.onclick = function() {
+                    toggleTask(i);
+                };
+
+                // Agregar el elemento de lista al DOM
+                taskList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

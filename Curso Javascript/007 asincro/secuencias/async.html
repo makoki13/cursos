@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add_elemento(texto="") {
+            let lista = document.getElementById("lista");
+            const elemento = document.createElement("li");
+            elemento.innerText = texto;
+            lista.appendChild(elemento)
+        }
+
+        function f1() {
+            add_elemento("elemento 1")
+        }
+
+        async function f2() {
+            await new Promise(resolve => {
+                setTimeout(function() {
+                    add_elemento("elemento 2")
+                    resolve(); // Éxito            
+                }, 5000);
+            });
+        }                
+
+        function f3() {
+            add_elemento("elemento 3")
+        }
+
+        async function ejecutar_funciones() {
+            f1()
+            await f2()
+            f3()
+        }
+    </script>
+</head>
+<body>
+    <ul id="lista"></ul>
+    <script>
+        ejecutar_funciones()
+    </script>
+</body>
+</html>

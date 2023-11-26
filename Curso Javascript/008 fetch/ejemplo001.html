@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Lista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: pink;
+            color: black;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 10px;
+        }
+
+        li {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            background-color: #fff;
+            width:300px;
+        }
+    </style>
+    <script src="ejemplo001.js"></script>
+</head>
+<body>
+    <button onclick="carga()">Cargar Lista desde servidor</button>
+    <ul id="lista"></ul>
+</body>
+</html>

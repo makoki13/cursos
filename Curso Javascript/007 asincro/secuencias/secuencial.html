@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add_elemento(texto="") {
+            let lista = document.getElementById("lista");
+            const elemento = document.createElement("li");
+            elemento.innerText = texto;
+            lista.appendChild(elemento)
+        }
+
+        function f1() {
+            add_elemento("elemento 1")
+        }
+
+        function f2() {
+            add_elemento("elemento 2")
+        }
+
+        function f3() {
+            add_elemento("elemento 3")
+        }
+    </script>
+</head>
+<body>
+    <ul id="lista"></ul>
+    <script>
+        f1()
+        f2()
+        f3()
+    </script>
+</body>
+</html>

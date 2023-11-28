@@ -19,7 +19,7 @@ async function obtenerClima(ubicacion) {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error('No se pudo obtener el clima.');
-    }
+    }                                                              
 
     const data = await response.json()
     console.log(data);    

@@ -3,7 +3,8 @@ function cargarDatos(url) {
         // Simular una solicitud AJAX
         setTimeout(function() {
             var datos = "Datos obtenidos de " + url;
-            resolve(datos); // Éxito            
+            resolve(datos); // Éxito    
+            //reject(new Error("Error en la promesa"))        
         }, 5000);
     });
 }
@@ -15,7 +16,7 @@ function lanzar_peticion() {
         document.getElementById("peticion").innerHTML = datos;        
     })
     .catch(function(error) {
-        document.getElementById("peticion").innerHTML = "ERROR!";        
+        document.getElementById("peticion").innerHTML = error;        
     });
 
     //document.getElementById("peticion").innerHTML = 'FIN OBTENIENDO DATOS...'

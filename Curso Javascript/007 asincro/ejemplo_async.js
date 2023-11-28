@@ -4,7 +4,7 @@ function promesaAsincronica(url) {
         setTimeout(function() {
             var datos = "Datos obtenidos de " + url;
             resolve(datos); // Éxito            
-        }, 1000);
+        }, 5000);
     });
 }
 
@@ -19,8 +19,7 @@ function lanzar_peticion() {
     document.getElementById("peticion").innerHTML = 'OBTENIENDO DATOS...'
     miFuncionAsincronica().then((valor) => {
         document.getElementById("peticion").innerHTML = valor
-      });
-    //document.getElementById("peticion").innerHTML = 'FIN OBTENIENDO DATOS...'
+    });
 }
 
 function lanzar_mensaje() {

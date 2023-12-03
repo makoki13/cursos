@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ejemplo de Position Sticky</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sticky-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 300px; /* La posición a la que el elemento se volverá pegajoso en relación con la ventana gráfica */
+            left: 300px;
+            width:300px;
+            height: 400px;
+            z-index: 100; /* Asegura que el encabezado pegajoso esté sobre otros elementos */
+        }
+
+        main {
+            padding: 20px;
+            /* Agrega algún contenido para que puedas desplazar la página y ver el efecto */
+            height: 1000px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="sticky-header">
+        <h1>Encabezado (Pegajoso)</h1>
+    </header>
+
+    <main>
+        <p>Contenido de la página...</p>
+    </main>
+
+</body>
+</html>

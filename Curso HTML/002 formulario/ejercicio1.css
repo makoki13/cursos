@@ -9,11 +9,17 @@ header {
   color: black;
   padding: 20px;
   text-align: center;
+
+  /* box-sizing: border-box; /* ajuste tamanyo */
+  width: 400px;
+  margin: 10px auto; /*10 -> top, botton * auto -> left, right*/
+  border: 1px solid black;
 }
 
 main {
   width: 400px;
-  margin: 10px auto;
+  margin: 10px auto; /*10 -> top, botton * auto -> left, right*/
+  border: 1px solid black;
 }
 
 form {
